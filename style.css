@@ -64,7 +64,7 @@ body {
 }
 
 .formContainer {
-    width: 52%;
+    width: 55%;
     /* display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
@@ -114,27 +114,6 @@ body {
     margin-right: 20px;
 }
 
-.buttonContainer button {
-    background-color: transparent;
-    border: 1px solid rgb(0, 26, 255);
-    color: #fff;
-    transition: all 0.3s;
-}
-
-.buttonContainer button:hover {
-    background-color: rgb(0, 10, 95);
-}
-
-.buttonContainer input {
-    background-color: transparent;
-    border: 1px solid rgb(255, 0, 0);
-    color: #fff;
-    transition: all 0.3s;
-}
-
-.buttonContainer input:hover {
-    background-color: rgb(95, 0, 0);
-}
 
 .buttonContainer button,
 .buttonContainer input {
@@ -176,7 +155,7 @@ body {
 }
 
 .grupoFamiliarItem input {
-    width: 33%;
+    width: 32%;
 }
 
 hr {

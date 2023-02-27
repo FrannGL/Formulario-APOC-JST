@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -23,104 +23,188 @@
                 <h1>Formulario de Afiliación</h1>
             </div>
 
-            <form class="formContainer" id="form">
+            <form class="formContainer needs-validation" id="form" novalidate>
 
                 <div class="form-group">
                     <label for="sede_id" class="control-label"><i class="bi bi-geo-alt-fill"></i>Sede</label>
                     <select class="form-control" id="sede_id" name="sede_id" required>
-                        <option>Seleccionar...</option>
-                        <option>CABA</option>
-                        <option>Bariloche</option>
-                        <option>Comodoro Rivadavia</option>
-                        <option>Córdoba</option>
-                        <option>Corrientes</option>
-                        <option>Mar del Plata</option>
-                        <option>Mendoza</option>
-                        <option>Neuquén</option>
-                        <option>Paraná</option>
-                        <option>Puerto Madryn</option>
-                        <option>Rafaela</option>
-                        <option>Resistencia</option>
-                        <option>Rosario</option>
-                        <option>Salta</option>
-                    </select>                    
+                        <option value="">Seleccionar...</option>
+                        <option value="CABA">CABA</option>
+                        <option value="Bariloche">Bariloche</option>
+                        <option value="Comodoro Rivadavia">Comodoro Rivadavia</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Corrientes">Corrientes</option>
+                        <option value="Mar eel Plata">Mar del Plata</option>
+                        <option value="Mendoza">Mendoza</option>
+                        <option value="Neuquén">Neuquén</option>
+                        <option value="Paraná">Paraná</option>
+                        <option value="Puerto Madryn">Puerto Madryn</option>
+                        <option value="Rafaela">Rafaela</option>
+                        <option value="Resistencia">Resistencia</option>
+                        <option value="Rosario">Rosario</option>
+                        <option value="Salta">Salta</option>
+                    </select> 
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div>                  
                 </div>
 
                 <div class="form-group">
                     <label for="nombres_id" class="control-label"><i class="bi bi-person-fill"></i>Nombres</label>
                     <input type="text" class="form-control" id="nombres_id" name="nombres_id" placeholder="Ingrese sus nombres..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div>  
                 </div>
                 
                 <div class="form-group">
                     <label for="apellido_id" class="control-label"><i class="bi bi-person-badge"></i>Apellido</label>
                     <input type="text" class="form-control" id="apellido_id" name="apellido_id" placeholder="Ingrese su apellido..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div>     
                 
                 <div class="form-group">
                     <label for="nacimiento_id" class="control-label"><i class="bi bi-calendar-event"></i>Fecha de Nacimiento</label>
                     <input type="date" class="form-control" id="nacimiento_id" name="nacimiento_id" placeholder="Ingrese su fecha de nacimiento..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div> 
                                         
                 <div class="form-group">
                     <label for="dni_id" class="control-label"><i class="bi bi-card-checklist"></i>DNI</label>
-                    <input type="number" class="form-control" id="dni_id" name="dni_id" placeholder="Ingrese su DNI ..." required>
+                    <input type="" minlength="8" maxlength="8" class="form-control" id="dni_id" name="dni_id" placeholder="Ingrese su DNI ..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div> 
 
                 <div class="form-group">
                     <label for="cuil_id" class="control-label"><i class="bi bi-file-text-fill"></i>CUIL</label>
-                    <input type="number" class="form-control" id="cuil_id" name="cuil_id" placeholder="Ingrese su CUIL ..." required>
+                    <input type="" minlength="11" maxlength="11" class="form-control" id="cuil_id" name="cuil_id" placeholder="Ingrese su DNI ..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div>
 
                 <div class="form-group">
                     <label for="genero_id" class="control-label"><i class="bi bi-gender-ambiguous"></i>Género</label>
                     <select class="form-control" id="genero_id" name="genero_id" required>
-                        <option>Seleccionar...</option>
-                        <option>Masculino</option>
-                        <option>Femenino</option>
-                        <option>Otros</option>
-                    </select>                    
+                        <option value="">Seleccionar...</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div>                     
                 </div>
 
                 <div class="form-group">
                     <label for="nacionalidad_id" class="control-label"><i class="bi bi-globe"></i>Nacionalidad</label>
                     <input type="text" class="form-control" id="nacionalidad_id" name="nacionalidad_id" placeholder="Ingrese su nacionalidad ..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div>
 
                 <div class="form-group">
                     <label for="estadocivil_id" class="control-label"><i class="bi bi-person-hearts"></i>Estado Civil</label>
                     <select class="form-control" id="estadocivil_id" name="estadocivil_id" required>
-                        <option>Seleccionar...</option>
-                        <option>Soltero(a)</option>
-                        <option>Casado(a)</option>
-                        <option>Unión Convivencial</option>
-                        <option>Divorciado(a)</option>
-                        <option>Viudo(a)</option>
-                    </select>                    
+                        <option value="">Seleccionar...</option>
+                        <option value="Soltero(a)">Soltero(a)</option>
+                        <option value="Casado(a)">Casado(a)</option>
+                        <option value="Union Convivencial">Unión Convivencial</option>
+                        <option value="Divorciado(a)">Divorciado(a)</option>
+                        <option value="Viudo(a)">Viudo(a)</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div>                     
                 </div>
 
                 <div class="form-group">
                     <label for="telefono_id" class="control-label"><i class="bi bi-phone"></i>Teléfono</label>
-                    <input type="number" class="form-control" id="telefono_id" name="telefono_id" placeholder="Ingrese su número ..." required>
+                    <input type="" minlength="10" maxlength="15" class="form-control" id="telefono_id" name="telefono_id" placeholder="Ingrese su teléfono ..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div>
 
                 <div class="form-group">
                     <label for="email_id" class="control-label"><i class="bi bi-envelope-at"></i>Correo Electrónico</label>
                     <input type="email" class="form-control" id="email_id" name="email_id" placeholder="Ingrese su EMAIL ..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div>
             
                 <div class="form-group">
                     <label for="domicilio_id" class="control-label"><i class="bi bi-house"></i>Domicilio</label>
                     <input type="text" class="form-control" id="domicilio_id" name="domicilio_id" placeholder="Ingrese su domicilio" required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div>
                 
                 <div class="form-group">
                     <label for="localidad_id" class="control-label"><i class="bi bi-bank"></i>Localidad</label>
                     <input type="text" class="form-control" id="localidad_id" name="localidad_id" placeholder="Ingrese su localidad" required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div>
                 
                 <div class="form-group">
                     <label for="codigopostal_id" class="control-label"><i class="bi bi-chat-left-quote"></i>Código Postal</label>
-                    <input type="number" class="form-control" id="codigopostal_id" name="codigopostal_id" placeholder="Ingrese su código postal" required>
+                    <input type="" minlength="4" maxlength="8" class="form-control" id="codigopostal_id" name="codigopostal_id" placeholder="Ingrese su Codigo Postal ..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
                 </div>
 
                 <div class="grupoFamiliarContainer">
@@ -243,9 +327,10 @@
             </form>
 
         </div>
+        
 
         <script src="app.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>

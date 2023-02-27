@@ -1,14 +1,14 @@
 const btnSend = document.getElementById('button-send');
 
 document.getElementById('form').addEventListener('submit', function(event) {
-   event.preventDefault();
+    event.preventDefault();
 
-   btnSend.value = 'Sending...';
+    btnSend.value = 'Sending...';
 
-   const serviceID = 'default_service';
-   const templateID = 'template_z2xr16g';
+const serviceID = 'default_service';
+const templateID = 'template_z2xr16g';
 
-   emailjs.sendForm(serviceID, templateID, this)
+emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
         Swal.fire({
             position: 'center',
@@ -17,19 +17,10 @@ document.getElementById('form').addEventListener('submit', function(event) {
             showConfirmButton: true,
             confirmButtonColor: '#0d6efd',
             timer: 3000
-          })
-        // Toastify({
-        //     text: "Formulario enviado Correctamente",
-        //     duration: 2000,
-        //     gravity: "bottom",
-        //     position: "right",
-        //     style: {
-        //         background: "linear-gradient(to right, #00484b, #0088b6)",
-        //     },
-        // }).showToast();
+        })
     }, (err) => {
-      btnSend.value = 'Send Email';
-      alert(JSON.stringify(err));
+        btnSend.value = 'Send Email';
+        alert(JSON.stringify(err));
     });
 });
 
@@ -47,4 +38,18 @@ btnReset.addEventListener('click', () => {
 });
 
 
+(function () {
+    'use strict'
 
+    let forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+        }
+
+            form.classList.add('was-validated')
+        }, false)
+        })
+})()
