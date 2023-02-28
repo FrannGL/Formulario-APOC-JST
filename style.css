@@ -15,7 +15,7 @@ body {
 
 .wrapper {
     width: 100vw;
-    height: 2200px;
+    height: 1800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +23,7 @@ body {
 }
 
 .formImg {
-    width: 55%;
+    width: 90%;
     height: 100px;
     display: flex;
     justify-content: space-evenly;
@@ -35,7 +35,7 @@ body {
 }
 
 .formType {
-    width: 55%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +64,7 @@ body {
 }
 
 .formContainer {
-    width: 55%;
+    width: 90%;
     /* display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
@@ -72,7 +72,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.521);
     border: 1px solid #fff;
@@ -81,7 +81,7 @@ body {
 }
 
 .form-group {
-    width: 45%;
+    width: 30%;
 }
 
 .control-label {
@@ -96,7 +96,7 @@ body {
 }
 
 .form-control {
-    width: 100%;
+    width: 90%;
     height: 35px;
     border-radius: 10px;
     font-weight: 500;
@@ -125,7 +125,7 @@ body {
 }
 
 .grupoFamiliarContainer {
-    width: 93%;
+    width: 80%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -140,6 +140,10 @@ body {
 
 .grupoFamiliarContainer h2 i {
     padding: 10px;
+}
+
+.grupoFamiliarContainer h3 {
+    font-weight: bold;
 }
 
 .grupoFamiliarItem {

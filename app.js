@@ -1,7 +1,26 @@
-const btnSend = document.getElementById('button-send');
+// --------------------------------------- FUNCION VALIDACION DE FORMULARIO ---------------------------------------
 
-document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault();
+(function () {
+    'use strict'
+    
+    let forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+        }
+    
+            form.classList.add('was-validated')
+        }, false)
+        })
+})()
+
+
+// ------------------------------------------- FUNCION ENVIO DE MAIL --------------------------------------------------
+
+const btnSend = document.getElementById('button-send');
+document.getElementById('form').addEventListener('submit', function() {
 
     btnSend.value = 'Sending...';
 
@@ -24,6 +43,11 @@ emailjs.sendForm(serviceID, templateID, this)
     });
 });
 
+
+
+// --------------------------------------------- FUNCION RESETEO DE FORMULARIO -------------------------------------------
+
+
 const btnReset = document.getElementById('button-reset');
 btnReset.addEventListener('click', () => {
     Toastify({
@@ -36,20 +60,3 @@ btnReset.addEventListener('click', () => {
         },
     }).showToast();
 });
-
-
-(function () {
-    'use strict'
-
-    let forms = document.querySelectorAll('.needs-validation')
-    Array.prototype.slice.call(forms).forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-        }
-
-            form.classList.add('was-validated')
-        }, false)
-        })
-})()

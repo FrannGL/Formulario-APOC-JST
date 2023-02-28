@@ -154,7 +154,7 @@
 
                 <div class="form-group">
                     <label for="telefono_id" class="control-label"><i class="bi bi-phone"></i>Teléfono</label>
-                    <input type="" minlength="10" maxlength="15" class="form-control" id="telefono_id" name="telefono_id" placeholder="Ingrese su teléfono ..." required>
+                    <input type="" minlength="10" maxlength="12" class="form-control" id="telefono_id" name="telefono_id" placeholder="Ingrese su teléfono ..." required>
                     <div class="valid-feedback">
                         Correcto
                     </div> 
@@ -196,6 +196,17 @@
                     </div> 
                 </div>
                 
+                <div class="form-group">
+                    <label for="provincia_id" class="control-label"><i class="bi bi-bank2"></i>Provincia</label>
+                    <input type="text" class="form-control" id="provincia_id" name="provincia_id" placeholder="Ingrese su provincia ..." required>
+                    <div class="valid-feedback">
+                        Correcto
+                    </div> 
+                    <div class="invalid-feedback">
+                        Es necesario Completar
+                    </div> 
+                </div>
+
                 <div class="form-group">
                     <label for="codigopostal_id" class="control-label"><i class="bi bi-chat-left-quote"></i>Código Postal</label>
                     <input type="" minlength="4" maxlength="8" class="form-control" id="codigopostal_id" name="codigopostal_id" placeholder="Ingrese su Codigo Postal ..." required>
@@ -320,7 +331,7 @@
 
                 <div class="buttonContainer">>
                     <!-- <button type="reset" class="btn btn-danger btn-lg" id="button-reset">Reiniciar</button> -->
-                    <input type="reset" class="btn btn-danger btn-lg" name=resetbutton value=Reiniciar id="button-reset">
+                    <input type="reset" class="btn btn-danger btn-lg" name=button-reset value=Reiniciar id="button-reset">
                     <button type="submit" class="btn btn-primary btn-lg" id="button-send">Enviar</button>
                 </div>
                 
